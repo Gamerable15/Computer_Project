@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style.css" rel="stylesheet" type="text/css">
+    <style>
+        body {
+          background: url("gradient.png");
+          background-repeat: no-repeat;
+          background-size: 100%, 100%;
+        }
+        </style>
+    <title>Document</title>
+</head>
+<body>
+    <div id="header">
+        <div class = "container">
+            <nav>
+                <img src="Capture.png" class="logo">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                </ul>
+            </nav>
+            <div class="header-text">
+                <img src="Capture1.PNG" align="right" class="sup">
+                <p class="pod">School Student</p>
+                <h1>Hi, I am <span class="yo">Aaditya</span><br>From Nepal</h1>
+            </div>
+        </div>
+    </div>
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="Capture1.PNG">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="subtitle">About Me</h1>
+                    <p style="font-size: 20px;" class="cap">Hi, i am aaditya raj tandon from Nepal,Kathmandu. I am a student in millsberry school studying in grade 9. I live in tokha near Grande hospital. My hobbies are studying books and playing football. I also like coding.</p>
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills" style="display: none;">
+                        <ul>
+                            <li><Span>Sportsman</Span><br>Playing Football</li>
+                            <li><Span>Student</Span><br>Can solve a rubix cube in 30 secs</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education" style="display: none;">
+                        <ul>
+                            <li><Span>2022 AD</Span><br>BLE</li>
+                            <li><Span>2020 - 2023 AD</Span><br>Learned coding from youtube</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="experience" style="display: none;">
+                        <ul>
+                            <li>Has made 2 websites</li>
+                            <li>Has experience in C#</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+
+        function opentab(tabname) {
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link");
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).style.display="block"; 
+        }
+
+
+    </script>
+</body>
+</html>
